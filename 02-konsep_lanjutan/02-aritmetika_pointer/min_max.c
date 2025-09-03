@@ -26,6 +26,16 @@ int main(void) {
 // Tulis definisi fungsi cari_min_max Anda di sini
 void cari_min_max(int *arr, int n, int *p_min, int *p_max) {
     // Tulis logika Anda di sini
-    
+    int temp_min = arr[0];
+    int temp_max = arr[0];
 
+    for (int i = 1; i < n; i++) {
+        if (*(arr + i) < temp_min) {
+            *p_min = *(arr + i);
+            temp_min = *p_min;
+        } else if (*(arr + i) > temp_max) {
+            *p_max = *(arr + i);
+            temp_max = *p_max;
+        }
+    }
 }
